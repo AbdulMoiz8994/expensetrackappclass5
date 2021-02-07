@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+
+//import Components
+import {Heading} from './Components/Heading'
+import {Balance} from './Components/Balance';
+import {AccountSummary} from './Components/AccountSummary'
+import {AddTranscation} from './Components/AddTranscation'
+import {History} from './Components/History'
+import {Transaction} from './Components/Transaction'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+     <Heading/>
+     <Balance/>
+     <AccountSummary/>
+     <History/>
+     <AddTranscation/>
     </div>
   );
 }
