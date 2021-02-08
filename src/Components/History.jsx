@@ -1,7 +1,12 @@
 import React,{useContext} from 'react'
+
+//import contextAPI
 import {historyTransactionContext} from '../Context/ContextApi'
+
+
 export const History = () => {
-    let  transaction=useContext(historyTransactionContext)
+    let  {transaction}=useContext(historyTransactionContext)
+    console.log(transaction)
     // let transaction=[
     //     {value: +500,desc: "cash"},
     //     {value: -20,desc: "Books"},
