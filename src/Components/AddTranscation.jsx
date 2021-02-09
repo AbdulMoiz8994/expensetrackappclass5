@@ -5,18 +5,24 @@ import {historyTransactionContext} from '../Context/ContextApi'
 
 export const AddTranscation = () => {
 
-    let[newdesc,setdesc]=useState("");
+    let[newdesc,setdesc]=useState(" ");
     let[newvalue,setvalue]=useState(0)
+    
     let {AddTranscation}=useContext(historyTransactionContext)
- console.log(AddTranscation)
 
-const handleAddition=(event) =>{
-     event.preventDefault()
-     console.log(newdesc,newvalue)
-    // AddTranscation({
-    //     value: newvalue,
-    //     desc: newdesc
-    // })
+
+const handleAddition=(e) =>{
+    e.preventDefault();
+
+    console.log(newdesc,newvalue)
+    AddTranscation({
+        transaction: newdesc,
+        transaction: newvalue
+
+})
+setdesc(" ");
+setvalue(0);
+
 }
     return (
         <div className="newTranscaction">
@@ -24,15 +30,15 @@ const handleAddition=(event) =>{
             <form className="inputdetail"  onSubmit={handleAddition}>
                 <label>
                     Enter Description <br/>
-                    <input type="text" placeholder="Please Enter Purpose" value={newdesc} onChange={(ev) => setdesc(ev.target.value)}/>
+                    <input type="text" placeholder="Please Enter Purpose" value={newdesc}  onChange={(e) => setdesc(e.target.value)} required/>
                 </label>
                 <br/>
                 <label>
                     Amount <br/>
-                    <input type="number" placeholder="Please Enter Value"  value={newvalue} onChange={(ev) => setvalue(ev.target.value)}/>
+                    <input type="number" placeholder="Please Enter Value" value={newvalue} onChange={(e) => setvalue(e.target.value)} required/>
                 </label>
                 <br/><br/>
-                <input type="button" className="button" value="Add Transcation" />
+                <input type="button" className="button" value="Add Transcation"/>
             </form>
         </div>
     )
