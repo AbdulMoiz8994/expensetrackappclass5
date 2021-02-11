@@ -10,6 +10,7 @@ import {History} from './Components/History'
 // import {Transaction} from './Components/Transaction'
 
 import {TranscationProvider} from './Context/ContextApi'
+// import { Transhistory } from './Components/Transhistory';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
      <Balance/>
      <AccountSummary/>
      <History/>
+     {/* <Transhistory/> */}
      <AddTranscation/>
     </div>
     </TranscationProvider>

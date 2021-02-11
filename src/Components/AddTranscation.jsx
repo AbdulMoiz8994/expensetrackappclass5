@@ -13,13 +13,15 @@ export const AddTranscation = () => {
 
 const handleAddition=(e) =>{
     e.preventDefault();
+    // console.log(newdesc, newvalue)
 
-    console.log(newdesc,newvalue)
-    AddTranscation({
-        transaction: newdesc,
-        transaction: newvalue
+ const  newTransaction= ({
+       desc: newdesc,
+       value: Number(newvalue)
 
 })
+
+AddTranscation(newTransaction)
 setdesc(" ");
 setvalue(0);
 
@@ -38,7 +40,7 @@ setvalue(0);
                     <input type="number" placeholder="Please Enter Value" value={newvalue} onChange={(e) => setvalue(e.target.value)} required/>
                 </label>
                 <br/><br/>
-                <input type="button" className="button" value="Add Transcation"/>
+                <input type="submit" className="button" value="Add Transcation"/>
             </form>
         </div>
     )

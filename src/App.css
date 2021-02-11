@@ -23,13 +23,12 @@ h1 span{
   width: 300px;
   height: 100px;
 }
-/* .plus{
- 
- padding: 10px;
+.plus{
+  color: green; 
 }
 .minus{
-  padding-left: 20px  ;
-} */
+  color: red ;
+}
 .history{
   margin-top: -235px;
   margin-left: 650px;
@@ -53,7 +52,7 @@ h1 span{
   margin-top: 10px;
 }
 .newTranscaction{
-  margin-top: 80px;
+  margin-top: 150px;
   width: auto !important;
   height: auto !important;
   
@@ -66,19 +65,22 @@ h1 span{
 .inputdetail{
   margin-left: 50px;
   box-shadow: 0 0 10px gray;
-  width: 30%;
+  width: 22%;
   height: auto;
-  padding: 20px 10px !important;
+  padding: 20px 30px !important;
   margin-left: 170px;
 }
+.inputdetail label{
+  padding: 11px;
+}
 .inputdetail input{
-   width: 95%;
+   width: 80%;
    padding: 7px 10px;
-   margin: 5px 0px;
+   margin: 5px 10px;
 }
 .button{
-  width: 95% !important;
-  margin-left: 10px !important;  
+  width: 80% !important;
+  margin-left: 20px !important;  
   margin-top: -2px !important;
   background-color: #8D3DAF;
   color:  white;

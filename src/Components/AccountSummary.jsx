@@ -7,7 +7,7 @@ import {historyTransactionContext} from '../Context/ContextApi'
 export const AccountSummary = () => {
     
     const {transaction}=useContext(historyTransactionContext)
-    //  console.log(transaction)
+     console.log(transaction)
 
      const totoalAmount= transaction.map((transactions) => transactions.value)
     //  console.log(totoalAmount)
